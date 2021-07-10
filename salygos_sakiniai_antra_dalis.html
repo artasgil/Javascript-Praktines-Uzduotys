@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salygos sakiniai antra uzduotis</title>
+</head>
+
+<body>
+    <div class="skaiciai">
+        A skaičius: <input type="number" id="a" name="aSkaicius">
+        B skaičius: <input type="number" id="b" name="bSkaicius">
+        C skaičius: <input type="number" id="c" name="cSkaicius">
+
+        <button id="patvirtinti">Patvirtinti</button>
+        <div>
+            Rezultatas: <input type="text" id="rezultatas" name="rezultatas" disabled="true">
+        </div>
+        <script>
+            "use strict"
+            document.querySelector("#patvirtinti").addEventListener("click", function () {
+                a = parseFloat(document.querySelector("#a").value);
+                b = parseFloat(document.querySelector("#b").value);
+                c = parseFloat(document.querySelector("#c").value);
+
+                var a;
+                var b;
+                var c;
+                var isvedimoElementas = document.querySelector("#rezultatas");
+
+
+                if (a > b && a > c) {
+                    console.log(a);
+                    isvedimoElementas.value = "A skaičius didesnis už B ir C";
+                } else if (b > a && b > c) {
+                    isvedimoElementas.value = "B skaičius yra didesnis už A ir C";
+                } else if (c > b && c > b) {
+                    isvedimoElementas.value = "C skaičius yra didesnis už A ir B";
+                } else if (a == b && a == c && b == c) {
+                    isvedimoElementas.value = "Visi skaičiai yra lygus";
+                }
+            });
+        </script>
+</body>
+
+</html>
