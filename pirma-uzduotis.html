@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,87 +10,88 @@
         #demo {
             font-size: 48px;
         }
-        
     </style>
 </head>
+
 <body>
-    <div id= "demo"></div>
-<script>
+    <div id="demo"></div>
+    <script>
 
-    // 1. Panaudoti Javascript "use-strict" režimą.
-"use strict"
+        // 1. Panaudoti Javascript "use-strict" režimą.
+        "use strict"
 
-// 2. Apsirašyti 4 kintamuosius: skaicius1, skaicius2, skaicius3, skaicius4.
-var skaicius1, skaicius2, skaicius3, skaicius4;
+        // 2. Apsirašyti 4 kintamuosius: skaicius1, skaicius2, skaicius3, skaicius4.
+        var skaicius1, skaicius2, skaicius3, skaicius4;
 
-skaicius1=5;
-skaicius2=10;
-skaicius3=15;
-skaicius4=20;
+        skaicius1 = 5;
+        skaicius2 = 10;
+        skaicius3 = 15;
+        skaicius4 = 20;
 
-console.log("Pirmas skaičius: " + skaicius1 + " Antras skaičius: " + skaicius2 + " Trečias skaičius: " + skaicius3 + " Ketvirtas skaičius: " + skaicius4);
+        console.log("Pirmas skaičius: " + skaicius1 + " Antras skaičius: " + skaicius2 + " Trečias skaičius: " + skaicius3 + " Ketvirtas skaičius: " + skaicius4);
 
-// 3. Į konsolę išvesti visus 4 skaičius, jų visų sumą ir sandaugą.
-var suma;
-var daugyba;
+        // 3. Į konsolę išvesti visus 4 skaičius, jų visų sumą ir sandaugą.
+        var suma;
+        var daugyba;
 
-suma = skaicius1 + skaicius2 + skaicius3 + skaicius4;
-daugyba = skaicius1 * skaicius2 * skaicius3 * skaicius4;
+        suma = skaicius1 + skaicius2 + skaicius3 + skaicius4;
+        daugyba = skaicius1 * skaicius2 * skaicius3 * skaicius4;
 
-console.log("Suma: " + suma + " Daugyba: " + daugyba);
+        console.log("Suma: " + suma + " Daugyba: " + daugyba);
 
-// 3. Sukeisti skaicius1 ir skaicius2 reikšmes vietomis, pasinaudojant laikinuoju kintamuoju.
-var laikinasisKintamasis;
-laikinasisKintamasis = skaicius1;
+        // 3. Sukeisti skaicius1 ir skaicius2 reikšmes vietomis, pasinaudojant laikinuoju kintamuoju.
+        var laikinasisKintamasis;
+        laikinasisKintamasis = skaicius1;
 
-skaicius1 = skaicius2;
+        skaicius1 = skaicius2;
 
-skaicius2 = laikinasisKintamasis;
+        skaicius2 = laikinasisKintamasis;
 
-console.log("Du pirmieji skaičiai sukeisti vietomis: " + skaicius1 + " " + skaicius2);
+        console.log("Du pirmieji skaičiai sukeisti vietomis: " + skaicius1 + " " + skaicius2);
 
-//4. Sukeisti skaicius3 ir skaicius4 reikšmes vietomis be laikinojo kintamojo.
+        //4. Sukeisti skaicius3 ir skaicius4 reikšmes vietomis be laikinojo kintamojo.
 
-var masyvas;
-masyvas = [skaicius3,skaicius4];
-masyvas = masyvas.reverse();
+        var masyvas;
+        masyvas = [skaicius3, skaicius4];
+        masyvas = masyvas.reverse();
 
-console.log("skaicius2 ir skaicius4 sukeisti vietomis be laikinojo kintamajo, panaudojus masyvas.reverse() " + masyvas);
+        console.log("skaicius2 ir skaicius4 sukeisti vietomis be laikinojo kintamajo, panaudojus masyvas.reverse() " + masyvas);
 
-// alert("skaicius2 ir skaicius4 sukeisti vietomis be laikinojo kintamajo, išvestas į alert langą " + masyvas);
-
-
-// Susikurti kintamąjį maxSkaicius, jam priskirti maksimalią įmanomą skaitinę reikšmę (infinity netinka) ir išvesti į konsolę.
-
-var maxSkaicius;
-maxSkaicius = Number.MAX_SAFE_INTEGER;
-
-console.log("maxSkaicius maksimali imanoma skaitinė reikšmė: " + maxSkaicius);
+        // alert("skaicius2 ir skaicius4 sukeisti vietomis be laikinojo kintamajo, išvestas į alert langą " + masyvas);
 
 
-//---------------------------------------------------------------------------------------------------
+        // Susikurti kintamąjį maxSkaicius, jam priskirti maksimalią įmanomą skaitinę reikšmę (infinity netinka) ir išvesti į konsolę.
 
-// 1. Susikurti kintamuosius: skaicius5, skaicius6.
-// 2. Sukeisti kinamųju reikšmes skaicius5 ir skaicius6 pasitelkiant XOR operatorių.
-// 3. Rezultatą patalpinti į HTML dokumento div žymėje, kurios id="Rezultatas".
+        var maxSkaicius;
+        maxSkaicius = Number.MAX_SAFE_INTEGER;
 
-var skaicius5, skaicius6;
-skaicius5 = 25;
-skaicius6 = 35;
-skaicius5 = skaicius5^skaicius6;
-skaicius6 = skaicius5^skaicius6;
-skaicius5 = skaicius5^skaicius6;
+        console.log("maxSkaicius maksimali imanoma skaitinė reikšmė: " + maxSkaicius);
 
-console.log(skaicius5, skaicius6);
 
-document.getElementById("demo").innerHTML = skaicius5 + " " + skaicius6;
+        //---------------------------------------------------------------------------------------------------
+
+        // 1. Susikurti kintamuosius: skaicius5, skaicius6.
+        // 2. Sukeisti kinamųju reikšmes skaicius5 ir skaicius6 pasitelkiant XOR operatorių.
+        // 3. Rezultatą patalpinti į HTML dokumento div žymėje, kurios id="Rezultatas".
+
+        var skaicius5, skaicius6;
+        skaicius5 = 25;
+        skaicius6 = 35;
+        skaicius5 = skaicius5 ^ skaicius6;
+        skaicius6 = skaicius5 ^ skaicius6;
+        skaicius5 = skaicius5 ^ skaicius6;
+
+        console.log(skaicius5, skaicius6);
+
+        document.getElementById("demo").innerHTML = skaicius5 + " " + skaicius6;
 
 //---------------------------------------------------------------------------------------------
-</script>
+    </script>
 
 
 
 
 
 </body>
+
 </html>

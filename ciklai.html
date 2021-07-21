@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ciklai</title>
 </head>
+
 <body>
-<script>
-    "use strict"
-var nums = [1,2,3,4,5,6,7,8,9,10];
-var evens = [];
-var odds = [];
-var penki = [];
+    <script>
+        "use strict"
+        var nums = [1, 2, 3, 4, 8, 6, 7, 8, 9, 11];
+        var evens = [];
+        var odds = [];
+        var penki = [];
 
 
-    for (var i = 0; i < nums.length; i++) {
+        for (var i = 0; i < nums.length; i++) {
 
-        if ((nums[i] % 2) != 1) {
-            evens.push(nums[i]);
-                console.log(evens);
+            if ((nums[i] % 2) != 1) {
+                evens.push(nums[i]);
+            }
+            else {
+                odds.push(nums[i]);
+            }
+
         }
-        else {
-            odds.push(nums[i]);
-                console.log(odds);
+
+        for (var i = 0; i < nums.length; i++) {
+            if ((nums[i] % 5) == 0) {
+                penki.push(nums[i]);
+            }
+        }
+        console.log("Lyginiai skaičiai yra: " + evens);
+        console.log("Nelyginiai skaičiai yra: " + odds);
+        console.log("Skaičiai, kurie dalinsi iš 5: " + penki);
+
+
+
+
+        var numeriai = [1, 2, 3, 4,30, 8, 6, 7, 8, 9, 11];
+        var lyginiai = [];
+
+        for (var i = 0; i < numeriai.length; i++) {
+
+            if ((numeriai[i] % 2) != 1 && (numeriai[i] % 3) == 0) {
+                lyginiai.push(numeriai[i]);
+            }
+
         }
 
-    }
-    // for (var i = 0; i < nums.length; i++) {
-    //     ((nums[i] % 5) == 0) 
-    //         evens.push(nums[i]);
-    //             console.log(penki);
-    //     }
-    console.log("Lyginiai skaičiai yra: " + evens);
-    console.log("Nelyginiai skaičiai yra: " + odds);
-    console.log("Skaičiai, kurie dalinsi iš 5: " + penki);
+        console.log("Natūralių skaičių intervale [a; b] yra lyginių skaičių, besidalijančių iš 3: " + lyginiai.length);
 
-
-
-
-</script>
+    </script>
 </body>
+
 </html>
