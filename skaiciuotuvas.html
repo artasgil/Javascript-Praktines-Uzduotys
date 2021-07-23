@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skaiciuotuvas</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="sk1" name="sk1"></input>
+        <input type="text" id="sk2" name="sk2"></input>
+
+        <button id="sudetis" value="Check Empty" onclick="return ValidateTextBox()">Sudeti</button>
+        <button id="atimtis">Atimti</button>
+        <button id="daugyba">Dauginti</button>
+        <button id="dalyba">Dalinti</button>
+
+    </div>
+
+    <div id="rezultatas">
+    </div>
+    <script>
+        "use srtict"
+        function ValidateTextBox() {
+        if (document.getElementById("sk1").value.trim() == "") {
+            alert("Irasykite skaiciu!");
+            return false;
+        }
+    };
+        var skaiciuotuvas = {
+            a: 221,
+            b: 2,
+            rezultatas: 0,
+
+            paleidimas: function (sk1, sk2) {
+                this.a = sk1;
+                this.b = sk2;
+            },
+
+            sudetis: function () {
+                this.sudeti = this.a + this.b;
+                return this.sudeti;
+            },
+
+            atimtis: function () {
+                this.atimti = this.a - this.b;
+                return this.atimti;
+            },
+
+            daugyba: function () {
+                this.dauginti = this.a * this.b;
+                return this.dauginti;
+            },
+
+            dalyba: function () {
+                this.dalinti = this.a / this.b;
+                return this.dalinti;
+            },
+
+        }
+
+
+
+
+        document.querySelector('#sudetis').addEventListener('click', function () {
+            var sk1 = parseFloat(document.querySelector('#sk1').value);
+            var sk2 = parseFloat(document.querySelector('#sk2').value);
+            var isvedimoElementas = document.querySelector('#rezultatas');
+            skaiciuotuvas.paleidimas(sk1, sk2);
+            isvedimoElementas.innerHTML = skaiciuotuvas.sudetis();
+        });
+
+
+        document.querySelector('#atimtis').addEventListener('click', function () {
+            var sk1 = parseFloat(document.querySelector('#sk1').value);
+            var sk2 = parseFloat(document.querySelector('#sk2').value);
+            var isvedimoElementas = document.querySelector('#rezultatas');
+            skaiciuotuvas.paleidimas(sk1, sk2);
+            isvedimoElementas.innerHTML = skaiciuotuvas.atimtis();
+        });
+
+        document.querySelector('#daugyba').addEventListener('click', function () {
+            var sk1 = parseFloat(document.querySelector('#sk1').value);
+            var sk2 = parseFloat(document.querySelector('#sk2').value);
+            var isvedimoElementas = document.querySelector('#rezultatas');
+            skaiciuotuvas.paleidimas(sk1, sk2);
+            isvedimoElementas.innerHTML = skaiciuotuvas.daugyba();
+        });
+
+        document.querySelector('#dalyba').addEventListener('click', function () {
+            var sk1 = parseFloat(document.querySelector('#sk1').value);
+            var sk2 = parseFloat(document.querySelector('#sk2').value);
+            var isvedimoElementas = document.querySelector('#rezultatas');
+            skaiciuotuvas.paleidimas(sk1, sk2);
+            isvedimoElementas.innerHTML = skaiciuotuvas.dalyba();
+        });
+
+
+    </script>
+</body>
+
+</html>
